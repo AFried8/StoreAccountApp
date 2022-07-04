@@ -1,0 +1,12 @@
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\bin\Debug\SemesterProj.exe.config
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\bin\Debug\SemesterProj.exe
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\bin\Debug\SemesterProj.pdb
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.csproj.AssemblyReference.cache
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.csproj.SuggestedBindingRedirects.cache
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.Properties.Resources.resources
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.csproj.GenerateResource.cache
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.csproj.CoreCompileInputs.cache
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.exe
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.pdb
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.Welcome_form.resources
+C:\Users\alizf\source\repos\SemesterProj\SemesterProj\obj\Debug\SemesterProj.MainMenu.resources
