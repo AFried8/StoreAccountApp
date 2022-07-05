@@ -57,9 +57,13 @@ namespace SemesterProj {
         }
 
         private void load_next_page() {
-            System.Windows.Forms.MainMenu mainMenu = new System.Windows.Forms.MainMenu(account);
-            mainMenu.ShowDialog();
+            MainMenu mainMenu = new MainMenu(account, db);
+            mainMenu.Show();
         }
 
+        private void Btn_back_c_Click(object sender, EventArgs e) {
+            Pnl_create_account.Visible = false;
+            Pnl_welcome.Visible = true;
+        }
     }
 }

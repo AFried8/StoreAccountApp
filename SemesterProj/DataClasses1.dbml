@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StoreSales" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-9E1TFMN\SQLEXPRESS;Initial Catalog=StoreSales;Integrated Security=True" SettingsObjectName="SemesterProj.Properties.Settings" SettingsPropertyName="StoreSalesConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Account" Member="Accounts">
-    <Type Name="Account">
-      <Column Name="AccountID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Username" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
-      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
-      <Association Name="Account_Purchase" Member="Purchases" ThisKey="AccountID" OtherKey="Account" Type="Purchase" />
-    </Type>
-  </Table>
   <Table Name="dbo.Purchase" Member="Purchases">
     <Type Name="Purchase">
       <Column Name="PurchaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,8 +7,9 @@
       <Column Name="Item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
-      <Association Name="Account_Purchase" Member="Account1" ThisKey="Account" OtherKey="AccountID" Type="Account" IsForeignKey="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
       <Association Name="Item_Purchase" Member="Item1" ThisKey="Item" OtherKey="ItemID" Type="Item" IsForeignKey="true" />
+      <Association Name="Account_Purchase" Member="Account1" ThisKey="Account" OtherKey="AccountID" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Item" Member="Items">
@@ -27,6 +19,15 @@
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
       <Column Name="Available" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Item_Purchase" Member="Purchases" ThisKey="ItemID" OtherKey="Item" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="AccountID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Association Name="Account_Purchase" Member="Purchases" ThisKey="AccountID" OtherKey="Account" Type="Purchase" />
     </Type>
   </Table>
 </Database>

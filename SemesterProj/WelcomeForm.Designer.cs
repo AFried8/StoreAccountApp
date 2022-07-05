@@ -31,16 +31,17 @@
             this.Txt_password_l = new System.Windows.Forms.TextBox();
             this.Btn_login_l = new System.Windows.Forms.Button();
             this.Pnl_create_account = new System.Windows.Forms.Panel();
-            this.Pnl_welcome = new System.Windows.Forms.Panel();
-            this.Btn_create_account = new System.Windows.Forms.Button();
-            this.Btn_login = new System.Windows.Forms.Button();
             this.Lbl_error_c = new System.Windows.Forms.Label();
             this.Lbl_password_c = new System.Windows.Forms.Label();
             this.Lbl_username_c = new System.Windows.Forms.Label();
             this.Txt_username_c = new System.Windows.Forms.TextBox();
             this.Txt_password_c = new System.Windows.Forms.TextBox();
             this.Btn_create_account_c = new System.Windows.Forms.Button();
+            this.Pnl_welcome = new System.Windows.Forms.Panel();
+            this.Btn_create_account = new System.Windows.Forms.Button();
+            this.Btn_login = new System.Windows.Forms.Button();
             this.lbl_Welcome = new System.Windows.Forms.Label();
+            this.itemTableAdapter1 = new SemesterProj.StoreSalesDataSetTableAdapters.ItemTableAdapter();
             this.Pnl_login.SuspendLayout();
             this.Pnl_create_account.SuspendLayout();
             this.Pnl_welcome.SuspendLayout();
@@ -125,35 +126,6 @@
             this.Pnl_create_account.TabIndex = 5;
             this.Pnl_create_account.Visible = false;
             // 
-            // Pnl_welcome
-            // 
-            this.Pnl_welcome.Controls.Add(this.Btn_create_account);
-            this.Pnl_welcome.Controls.Add(this.Btn_login);
-            this.Pnl_welcome.Location = new System.Drawing.Point(222, 93);
-            this.Pnl_welcome.Name = "Pnl_welcome";
-            this.Pnl_welcome.Size = new System.Drawing.Size(251, 155);
-            this.Pnl_welcome.TabIndex = 5;
-            // 
-            // Btn_create_account
-            // 
-            this.Btn_create_account.Location = new System.Drawing.Point(73, 91);
-            this.Btn_create_account.Name = "Btn_create_account";
-            this.Btn_create_account.Size = new System.Drawing.Size(116, 23);
-            this.Btn_create_account.TabIndex = 1;
-            this.Btn_create_account.Text = "Create Account";
-            this.Btn_create_account.UseVisualStyleBackColor = true;
-            this.Btn_create_account.Click += new System.EventHandler(this.Btn_create_account_Click);
-            // 
-            // Btn_login
-            // 
-            this.Btn_login.Location = new System.Drawing.Point(73, 37);
-            this.Btn_login.Name = "Btn_login";
-            this.Btn_login.Size = new System.Drawing.Size(116, 23);
-            this.Btn_login.TabIndex = 0;
-            this.Btn_login.Text = "Login";
-            this.Btn_login.UseVisualStyleBackColor = true;
-            this.Btn_login.Click += new System.EventHandler(this.lbl_login_Click);
-            // 
             // Lbl_error_c
             // 
             this.Lbl_error_c.AutoSize = true;
@@ -204,6 +176,35 @@
             this.Btn_create_account_c.UseVisualStyleBackColor = true;
             this.Btn_create_account_c.Click += new System.EventHandler(this.btn_create_account_c_Click);
             // 
+            // Pnl_welcome
+            // 
+            this.Pnl_welcome.Controls.Add(this.Btn_create_account);
+            this.Pnl_welcome.Controls.Add(this.Btn_login);
+            this.Pnl_welcome.Location = new System.Drawing.Point(222, 93);
+            this.Pnl_welcome.Name = "Pnl_welcome";
+            this.Pnl_welcome.Size = new System.Drawing.Size(251, 155);
+            this.Pnl_welcome.TabIndex = 5;
+            // 
+            // Btn_create_account
+            // 
+            this.Btn_create_account.Location = new System.Drawing.Point(73, 91);
+            this.Btn_create_account.Name = "Btn_create_account";
+            this.Btn_create_account.Size = new System.Drawing.Size(116, 23);
+            this.Btn_create_account.TabIndex = 1;
+            this.Btn_create_account.Text = "Create Account";
+            this.Btn_create_account.UseVisualStyleBackColor = true;
+            this.Btn_create_account.Click += new System.EventHandler(this.Btn_create_account_Click);
+            // 
+            // Btn_login
+            // 
+            this.Btn_login.Location = new System.Drawing.Point(73, 37);
+            this.Btn_login.Name = "Btn_login";
+            this.Btn_login.Size = new System.Drawing.Size(116, 23);
+            this.Btn_login.TabIndex = 0;
+            this.Btn_login.Text = "Login";
+            this.Btn_login.UseVisualStyleBackColor = true;
+            this.Btn_login.Click += new System.EventHandler(this.lbl_login_Click);
+            // 
             // lbl_Welcome
             // 
             this.lbl_Welcome.AutoSize = true;
@@ -213,6 +214,10 @@
             this.lbl_Welcome.Size = new System.Drawing.Size(309, 25);
             this.lbl_Welcome.TabIndex = 1;
             this.lbl_Welcome.Text = "Welcome to your store account";
+            // 
+            // itemTableAdapter1
+            // 
+            this.itemTableAdapter1.ClearBeforeFill = true;
             // 
             // Welcome_form
             // 
@@ -255,6 +260,7 @@
         private System.Windows.Forms.Button Btn_create_account_c;
         private System.Windows.Forms.Label Lbl_error;
         private System.Windows.Forms.Label Lbl_error_c;
+        private StoreSalesDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
     }
 }
 
