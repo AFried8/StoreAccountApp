@@ -42,6 +42,8 @@
             this.Btn_login = new System.Windows.Forms.Button();
             this.lbl_Welcome = new System.Windows.Forms.Label();
             this.itemTableAdapter1 = new SemesterProj.StoreSalesDataSetTableAdapters.ItemTableAdapter();
+            this.Btn_back_c = new System.Windows.Forms.Button();
+            this.Btn_back_l = new System.Windows.Forms.Button();
             this.Pnl_login.SuspendLayout();
             this.Pnl_create_account.SuspendLayout();
             this.Pnl_welcome.SuspendLayout();
@@ -49,6 +51,7 @@
             // 
             // Pnl_login
             // 
+            this.Pnl_login.Controls.Add(this.Btn_back_l);
             this.Pnl_login.Controls.Add(this.Lbl_error);
             this.Pnl_login.Controls.Add(this.Lbl_password_l);
             this.Pnl_login.Controls.Add(this.Lbl_username_l);
@@ -114,6 +117,7 @@
             // 
             // Pnl_create_account
             // 
+            this.Pnl_create_account.Controls.Add(this.Btn_back_c);
             this.Pnl_create_account.Controls.Add(this.Lbl_error_c);
             this.Pnl_create_account.Controls.Add(this.Lbl_password_c);
             this.Pnl_create_account.Controls.Add(this.Lbl_username_c);
@@ -180,7 +184,7 @@
             // 
             this.Pnl_welcome.Controls.Add(this.Btn_create_account);
             this.Pnl_welcome.Controls.Add(this.Btn_login);
-            this.Pnl_welcome.Location = new System.Drawing.Point(222, 93);
+            this.Pnl_welcome.Location = new System.Drawing.Point(225, 93);
             this.Pnl_welcome.Name = "Pnl_welcome";
             this.Pnl_welcome.Size = new System.Drawing.Size(251, 155);
             this.Pnl_welcome.TabIndex = 5;
@@ -191,7 +195,7 @@
             this.Btn_create_account.Name = "Btn_create_account";
             this.Btn_create_account.Size = new System.Drawing.Size(116, 23);
             this.Btn_create_account.TabIndex = 1;
-            this.Btn_create_account.Text = "Create Account";
+            this.Btn_create_account.Text = "Create Account ";
             this.Btn_create_account.UseVisualStyleBackColor = true;
             this.Btn_create_account.Click += new System.EventHandler(this.Btn_create_account_Click);
             // 
@@ -218,6 +222,26 @@
             // itemTableAdapter1
             // 
             this.itemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Btn_back_c
+            // 
+            this.Btn_back_c.Location = new System.Drawing.Point(0, 4);
+            this.Btn_back_c.Name = "Btn_back_c";
+            this.Btn_back_c.Size = new System.Drawing.Size(28, 23);
+            this.Btn_back_c.TabIndex = 6;
+            this.Btn_back_c.Text = "<-";
+            this.Btn_back_c.UseVisualStyleBackColor = true;
+            this.Btn_back_c.Click += new System.EventHandler(this.Btn_back_c_Click_1);
+            // 
+            // Btn_back_l
+            // 
+            this.Btn_back_l.Location = new System.Drawing.Point(0, 0);
+            this.Btn_back_l.Name = "Btn_back_l";
+            this.Btn_back_l.Size = new System.Drawing.Size(30, 23);
+            this.Btn_back_l.TabIndex = 7;
+            this.Btn_back_l.Text = "<-";
+            this.Btn_back_l.UseVisualStyleBackColor = true;
+            this.Btn_back_l.Click += new System.EventHandler(this.Btn_back_l_Click);
             // 
             // Welcome_form
             // 
@@ -261,6 +285,8 @@
         private System.Windows.Forms.Label Lbl_error;
         private System.Windows.Forms.Label Lbl_error_c;
         private StoreSalesDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private System.Windows.Forms.Button Btn_back_c;
+        private System.Windows.Forms.Button Btn_back_l;
     }
 }
 

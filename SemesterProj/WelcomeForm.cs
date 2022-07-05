@@ -56,14 +56,29 @@ namespace SemesterProj {
             }
         }
 
-        private void load_next_page() {
-            MainMenu mainMenu = new MainMenu(account, db);
-            mainMenu.Show();
-        }
-
         private void Btn_back_c_Click(object sender, EventArgs e) {
             Pnl_create_account.Visible = false;
             Pnl_welcome.Visible = true;
+        }
+
+        private void Btn_back_c_Click_1(object sender, EventArgs e) {
+            Lbl_error.Text = "";
+            Pnl_create_account.Visible=false;
+            Pnl_welcome.Visible=true;
+            
+        }
+
+        private void Btn_back_l_Click(object sender, EventArgs e) {
+            Lbl_error_c.Text = "";
+            Pnl_login.Visible=false;
+            Pnl_welcome.Visible=true;
+           
+        }
+
+
+        private void load_next_page() {
+            MainMenu mainMenu = new MainMenu(account, db);
+            mainMenu.Show();
         }
     }
 }
