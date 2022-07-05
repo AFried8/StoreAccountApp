@@ -165,9 +165,11 @@ namespace SemesterProj {
         private void Cmb_filter_SelectedIndexChanged(object sender, EventArgs e) {
 
             if (Cmb_filter.SelectedIndex == 0) {
+                Pnl_filter_price.Visible = false;
                 Pnl_date_filter.Visible = true;
             }
             if(Cmb_filter.SelectedIndex == 1) {
+                Pnl_date_filter.Visible = false;
                 Pnl_filter_price.Visible = true;
             }
         }
