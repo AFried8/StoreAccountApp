@@ -80,5 +80,9 @@ namespace SemesterProj {
             MainMenu mainMenu = new MainMenu(account, db);
             mainMenu.Show();
         }
+
+        private void Welcome_form_FormClosing(object sender, FormClosingEventArgs e) {
+            db.Dispose();
+        }
     }
 }

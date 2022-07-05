@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.Pnl_login = new System.Windows.Forms.Panel();
+            this.Btn_back_l = new System.Windows.Forms.Button();
             this.Lbl_error = new System.Windows.Forms.Label();
             this.Lbl_password_l = new System.Windows.Forms.Label();
             this.Lbl_username_l = new System.Windows.Forms.Label();
@@ -31,6 +32,7 @@
             this.Txt_password_l = new System.Windows.Forms.TextBox();
             this.Btn_login_l = new System.Windows.Forms.Button();
             this.Pnl_create_account = new System.Windows.Forms.Panel();
+            this.Btn_back_c = new System.Windows.Forms.Button();
             this.Lbl_error_c = new System.Windows.Forms.Label();
             this.Lbl_password_c = new System.Windows.Forms.Label();
             this.Lbl_username_c = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.Btn_login = new System.Windows.Forms.Button();
             this.lbl_Welcome = new System.Windows.Forms.Label();
             this.itemTableAdapter1 = new SemesterProj.StoreSalesDataSetTableAdapters.ItemTableAdapter();
-            this.Btn_back_c = new System.Windows.Forms.Button();
-            this.Btn_back_l = new System.Windows.Forms.Button();
             this.Pnl_login.SuspendLayout();
             this.Pnl_create_account.SuspendLayout();
             this.Pnl_welcome.SuspendLayout();
@@ -63,6 +63,16 @@
             this.Pnl_login.Size = new System.Drawing.Size(350, 162);
             this.Pnl_login.TabIndex = 0;
             this.Pnl_login.Visible = false;
+            // 
+            // Btn_back_l
+            // 
+            this.Btn_back_l.Location = new System.Drawing.Point(0, 0);
+            this.Btn_back_l.Name = "Btn_back_l";
+            this.Btn_back_l.Size = new System.Drawing.Size(30, 23);
+            this.Btn_back_l.TabIndex = 7;
+            this.Btn_back_l.Text = "<-";
+            this.Btn_back_l.UseVisualStyleBackColor = true;
+            this.Btn_back_l.Click += new System.EventHandler(this.Btn_back_l_Click);
             // 
             // Lbl_error
             // 
@@ -129,6 +139,16 @@
             this.Pnl_create_account.Size = new System.Drawing.Size(254, 158);
             this.Pnl_create_account.TabIndex = 5;
             this.Pnl_create_account.Visible = false;
+            // 
+            // Btn_back_c
+            // 
+            this.Btn_back_c.Location = new System.Drawing.Point(0, 4);
+            this.Btn_back_c.Name = "Btn_back_c";
+            this.Btn_back_c.Size = new System.Drawing.Size(28, 23);
+            this.Btn_back_c.TabIndex = 6;
+            this.Btn_back_c.Text = "<-";
+            this.Btn_back_c.UseVisualStyleBackColor = true;
+            this.Btn_back_c.Click += new System.EventHandler(this.Btn_back_c_Click_1);
             // 
             // Lbl_error_c
             // 
@@ -223,26 +243,6 @@
             // 
             this.itemTableAdapter1.ClearBeforeFill = true;
             // 
-            // Btn_back_c
-            // 
-            this.Btn_back_c.Location = new System.Drawing.Point(0, 4);
-            this.Btn_back_c.Name = "Btn_back_c";
-            this.Btn_back_c.Size = new System.Drawing.Size(28, 23);
-            this.Btn_back_c.TabIndex = 6;
-            this.Btn_back_c.Text = "<-";
-            this.Btn_back_c.UseVisualStyleBackColor = true;
-            this.Btn_back_c.Click += new System.EventHandler(this.Btn_back_c_Click_1);
-            // 
-            // Btn_back_l
-            // 
-            this.Btn_back_l.Location = new System.Drawing.Point(0, 0);
-            this.Btn_back_l.Name = "Btn_back_l";
-            this.Btn_back_l.Size = new System.Drawing.Size(30, 23);
-            this.Btn_back_l.TabIndex = 7;
-            this.Btn_back_l.Text = "<-";
-            this.Btn_back_l.UseVisualStyleBackColor = true;
-            this.Btn_back_l.Click += new System.EventHandler(this.Btn_back_l_Click);
-            // 
             // Welcome_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +254,7 @@
             this.Controls.Add(this.Pnl_login);
             this.Name = "Welcome_form";
             this.Text = "Welcome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Welcome_form_FormClosing);
             this.Pnl_login.ResumeLayout(false);
             this.Pnl_login.PerformLayout();
             this.Pnl_create_account.ResumeLayout(false);
